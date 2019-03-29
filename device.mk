@@ -70,6 +70,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
     ro.usb.pid_suffix=1B8
 
+# Sdcard fuse support
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcard_fuse=true
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/yukon/platform.mk)
 $(call inherit-product, vendor/sony/eagle/eagle-vendor.mk)
